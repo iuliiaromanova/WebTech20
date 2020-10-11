@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML-Einführung</title>
+</head>
+<body>
+    <h1>große Überschrift</h1>
+    <p>ein erster Absatz</p>
+    <h3>kleinere Überschrift</h3>
+    <p>noch ein Absatz</p>
+
+    Vorteile von HTML
+    <ul>
+        <li>Syntax und Semantic frei definierbar</li>
+        <li>von Menschen lesbar</li>
+        <li>in Programmiersprachen einbettbar</li>
+        <li>offen für zukünftige Entwicklungen</li>
+    </ul>
+
+<!-- Das ist ein Kommentar -->
+<p>das ist ein längerer Absatz <br/>
+das ist Text auf der nächsten Zeile </p>
+
+<img src="./images/bild.jpg" alt="Westend" style="width: 600px;" title="Wir Treffen uns in Westend"/>
+
+<h3>Input-Elemente</h3>
+
+<input type="text" />
+<input type="radio" />
+<input type="checkbox" checked="checked" />
+<input type="datetime-local" />
+
+<h3>Hyperlinks</h3>
+<a href="http://berlinerwg572748.pythonanywhere.com/" target="_blank">Betriebliche Anwendung </a> <br/>
+
+<a href="http://berlinerwg572748.pythonanywhere.com/" target="_blank">
+    <img src="./images/zimmer.jpg" alt="berliner-wg" style="width: 400px;"/>
+    </a>
+
+<a href="./unter/dok1.html">Dok 1</a>
+
+<h3>Container</h3>
+<div>
+    <p>ein Absatz</p>
+    <p>noch ein Absatz</p>
+    <p>noch ein Absatz</p>
+
+</div>
+<section>
+    <header>ein Absatz</header>
+    <article>noch ein Absatz</article>
+    <footer>noch ein Absatz</footer>
+</section>
+
+<h3>Formulare</h3>
+
+<form method="get"> <!-- Damit kann man aber alles im link sehen!
+                    Eine gute Variante für Suche, aber schlechte für Log-in System
+                    Dafür ist besser method="post" verwenden -->
+    <input type="text" name="user" placeholder="user" />
+    <input type="password" name="pwd" />
+    <button type="submit">Login</button>
+
+</form>
+
+<ul>
+    <li><a href="http://freiheit.f4.htw-berlin.de/webtech/html/#http-anfragemethoden" target="_blank">HTTP-Anfragemethoden</a> </li>
+    <li><a href="http://freiheit.f4.htw-berlin.de/webtech/html/#http-statusmeldungen" target="_blank">HTTP-Statusmeldungen</a> </li>
+    <li><a href="http://freiheit.f4.htw-berlin.de/webtech/html/#urls" target="_blank">URLs</a> </li>
+    <li><a href="http://freiheit.f4.htw-berlin.de/webtech/html/#domain-name-service-dns" target="_blank">Domain Name Service (DNS)</a> </li>
+</ul>
+
+</body>
+</html>
