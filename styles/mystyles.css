@@ -1,0 +1,19 @@
+/*
+Kommentar in CSS
+
+selektor {
+    eigeschaft1: wert;
+    eigeschaft2: wert;
+    eigeschaft3: wert;
+    }
+ */
+
+body {
+    font-family: Verdana;
+    color: palevioletred;
+}
+
+a {
+    text-decoration: none;
+    color: fuchsia;
+}

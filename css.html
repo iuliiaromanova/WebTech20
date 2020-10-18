@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS</title>
+    <!-- 1. externe CSS-Datei -->
+    <link rel="stylesheet" href="./styles/mystyles.css">
+    <!-- 2. style-Element -->
+    <style>
+        h1 {
+            font-weight: normal;
+            color: cornflowerblue;
+        }
+
+      div ul {
+            color: grey;
+        }
+
+        ul {
+            color: navy;
+        }
+
+        li:nth-child(odd) {
+            background-color: yellow;
+        }
+
+        a:link {
+            background-color: red;
+        }
+
+        a:visited {
+            background-color: dimgrey;
+            color: white;
+        }
+
+        a:hover {
+            background-color: limegreen;
+            color: black;
+        }
+
+        a:active {
+            background-color: orange;
+        }
+
+        .orangeBackground{
+            background-color: orange;
+        }
+
+        .blackColor{
+            color: black;
+        }
+
+        li {
+            border: black solid 2px;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+
+    <!-- OPERATOREN: Leerzeichen, Komma, >, +, ~
+         für alle ul in div : div ul
+         für alle div UND ul : div, ul
+         Komma steht für UND und Leerzeichen wenn wir nur ein Element zugreifen möchten
+         für alle ul, die direkt das Kind sein : div>ul
+         für alle ul, die direkt nach div (</div>) kommen : div + ul
+         für alle ul, die Geschwister sind : div ~ ul
+         Geschwister : die Elemente, die in einer Höher sind,
+         zB in body (unter) gibt es 4 Geschwister: h1, div, div, ul -->
+
+
+</head>
+<body>
+<h1>Cascading Style Sheets (CSS)</h1>
+<!-- 3. Möglichkeit style-Atribut in einem Element
+<div style="color: grey; background-color: aquamarine ">-->
+<div>
+    living standard - weiterentwickelt von W3C. Seit 2000 CSS3.
+    Wichtig: Trennung zwischen Inhalten (HTML) und Aussehen (CSS).
+</div>
+<div> Wofür CSS?
+     <ul class="orangeBackground blackColor">
+         <li>ansprechender Stil (Font, Farben, Schriftgröße, Rahmen, ...)
+            <a href="index.html">Link 2</a>
+         </li>
+         <li>Layout (2-spaltig, 3-spaltig, Kopf- und Fußzeilen,...)
+             <a href="index.html">Link 3</a>
+         </li>
+         <li>responsives Webdesign (unterschiedlich für Mobile, Tablets, Desktop, ...)
+             <a href="index.html">Link 4</a>
+         </li>
+     </ul>
+</div>
+<ul>Inhalte heute:
+    <li>Orte für CSS-Definitionen
+        <a href="./unter/dok1.html">Link 5</a>
+    </li>
+    <li>Selektoren
+        <a href="./unter/dok1.html">Link 6</a>
+    </li>
+    <li>Box Model
+        <a href="./unter/dok1.html">Link 7</a>
+    </li>
+    <li>Layout (Prinzip, float)
+        <a href="./unter/dok1.html">Link 8</a>
+    </li>
+    <li>Gewichtung der Selektoren
+        <a href="./unter/dok1.html">Link 9</a>
+    </li>
+</ul>
+</body>
+</html>

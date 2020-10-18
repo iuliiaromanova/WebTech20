@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gewichtung der Selektoren</title>
+    <style>
+        a:link { /* B=0 C=1 D=1 */
+            color: blue;
+        }
+
+        li a{  /* B=0 C=0 D=2 (a in li) */
+            color: magenta;
+        }
+
+        #navigation a.link {  /* B=1 C=1 D=1 */
+            color: red;
+        }
+
+        #navigation li a {  /* B=1 C=0 D=2 (a in li) */
+            color: black;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- Beispiel 0:  <li><a href="startseite.html" class="link" style="color: brown;">Startseite</a></li> -->
+<ul id="navigation">
+    <li><a href="startseite.html" class="link">Startseite</a></li>
+    <li><a href="unterseite.html" class="link">Unterseite</a></li>
+    <li>Kategorie A: style-Attribut im html-Element (Beispiel 0 / Color:brown) </li>
+    <li>Kategorie B: für id </li>
+    <li>Kategorie C: Anzahl Klassen und Pseudoklassen</li>
+    <li>Kategorie D: Anzahl der betrofenen Elemente und Pseudoelmente </li>
+</ul>
+
+</body>
+</html>
