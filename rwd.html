@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Webdesign</title>
+    <style>
+        div {
+            width: 100%;
+            text-align: center;
+            background-color: red;
+            padding-top: 20%;
+            padding-bottom: 20%;
+            font-size: medium;
+        }
+        
+        @media screen and (min-width: 800px)
+        {
+            div {
+                background-color: green;
+                color: yellow;
+                font-size: large;
+            }
+        }
+
+        @media screen and (min-width: 1200px)
+        {
+            div {
+                background-color: blue;
+                color: white;
+                font-size: xx-large;
+            }
+        }
+
+        @media screen and (orientation: portrait)
+        {
+            div {
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                background-color: yellow;
+                color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Ändern Sie die Breite des Browsers, um den Effekt zu sehen!</div>
+</body>
+</html>

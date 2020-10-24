@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
+    <title>Bootstrap</title>
+</head>
+<body>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-3">Jetzt mit Bootstrap!</h1>
+            <p>Wir verwenden jetzt Bootstrap und schauen uns mal die Anwendung ein wenig genauer an. Das Grundprinzip besteht darin,
+                HTML-Elementen Klassen zuzuordnen. Dieser große graue Kasten hier nennt sich z.B. Jumbotron.</p>
+            <p><a class="btn btn-primary btn-lg" href="https://getbootstrap.com/docs/4.5/examples/" role="button">Bootstrap Beispiele &raquo;</a></p>
+        </div>
+    </div>
+
+    <div class="container">
+            <h2>Formular mit Validierung, ob Eingabe erfolgte (nur mit CSS - kein JavaScript!)</h2>
+            <p>Hier wird z.B. die Klasse <code>.was-validated</code> verwendet, um zu überprüfen, ob in den Textfeldern und der Checkbox eine Eingabe erfolgt ist.</p>
+           <form class="was-validated">
+                <div class="form-group">
+                    <label for="uname">Username:</label>
+                    <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                  <div class="valid-feedback">Korrekt</div>
+                    <div class="invalid-feedback">Feld bitte ausfüllen!</div>
+             </div>
+             <div class="form-group">
+                    <label for="pwd">Password:</label>
+                 <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                 <div class="valid-feedback">Korrekt</div>
+                    <div class="invalid-feedback">Feld bitte ausfüllen!</div>
+             </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember" required> Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.
+                        <div class="valid-feedback">Korrekt</div>
+                        <div class="invalid-feedback">Hier bitte bestätigen!</div>
+                 </label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+     </div>
+</main>
+</body>
+</html>
