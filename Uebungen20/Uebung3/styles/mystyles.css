@@ -51,8 +51,8 @@ a:hover {
     }
 }
 
-.htw-table tr:hover   {
-    background-color: var(--htw-gruen) !important;
+.htw-table tbody tr:hover   {
+    background-color: var(--htw-gruen) ;
 }
 
 #signature {
