@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" >
+    <title>HTML ändern</title>
+</head>
+<body class="container-fluid">
+    <input id="input1" type="text" class="form-control" placeholder="neues Item" onchange="doSomething()"/>
+    <ul id="ul1" class="list-group">
+        <li class="list-group-item active">erster</li>
+        <li class="list-group-item">zweiter</li>
+        <li class="list-group-item">dritter</li>
+    </ul>
+    <button type="button" class="btn btn-primary" onclick="createHeadline()">Klick mich!</button>
+    <script>
+        var idnr = 1; // globale variabeln
+        function doSomething()
+        {
+            let input1 = document.getElementById('input1');
+            let input1_value = input1.value;
+            let ul1 = document.getElementById('ul1');
+
+            let new_item = document.createElement('li');
+            new_item.classList.add("list-group-item");
+            new_item.id = "li" + idnr++;
+            /*
+            let new_text = document.createTextNode(input1_value);
+            new_item.appendChild(new_text); // li--> value
+             */
+            new_item.innerHTML = input1_value + "<span style='color: red;'> test </span>";
+            // ul1.appendChild(new_item);  --> damit sehe ich noch eine Kindknote, wie erster/zweiter usw
+
+            let listitems = document.getElementsByTagName('li');  // array
+            console.log("-------- drei --------" + listitems.length);
+            for(let i=0; i<listitems.length; i++)
+            {
+                console.log(listitems[i]);
+            }
+
+            ul1.insertBefore(new_item, listitems[0]);
+
+            let new_item2 = document.createElement('li');
+            new_item2.classList.add("list-group-item");
+            new_item2.id = "li" + idnr++;
+            new_item2.innerHTML = "fuenftes";  // es erscheint automatisch, muss nichts schreiben
+
+            ul1.appendChild(new_item2);
+            console.log("-------- nach 2 neuen --------" + listitems.length);
+            for(let i=0; i<listitems.length; i++)
+            {
+                console.log(listitems[i]);
+            }
+
+            listitems[1].classList.remove("active");
+            listitems[3].classList.add("active");
+        }
+        
+        function createHeadline()
+        {
+            let body = document.body;
+            let input = document.getElementById('input1');
+
+            let h1 = document.createElement('h1');
+            h1.innerHTML = "HTML ändern";
+
+            h1.addEventListener('mouseover', doSomethingElse);
+            h1.addEventListener('mouseout', doSomethingElse);
+            body.insertBefore(h1, input);
+        }
+
+        function doSomethingElse(event)
+        {
+            let h1 = event.target;
+            if (h1.style.color === "red")
+            {
+                h1.style.color = "green";
+                h1.style.fontSize = "xx-large";
+                h1.innerHTML = "...und weg";
+            }
+            else {
+                h1.style.color = "red";
+                h1.style.fontSize = "400%";
+                h1.innerHTML = "...und wieder da";
+            }
+        }
+    </script>
+
+</body>
+</html>

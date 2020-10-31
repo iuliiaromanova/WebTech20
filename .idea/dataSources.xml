@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="htw" uuid="d39c04c3-80f4-44fb-b8c3-f8d630d82e8c">
+      <driver-ref>azure.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://projektcontrolling-dwh-server.database.windows.net:1433;database=projektcontrolling_sqldb</jdbc-url>
+    </data-source>
+  </component>
+</project>
