@@ -1,0 +1,15 @@
+{
+  "vorname": "Maria",
+  "nachname": "Musrefrau",
+  "kinder": {
+    "max": {
+      "vorname": "Max",
+      "alter": 7
+    },
+    "moritz": {
+      "vorname": "Moritz",
+      "alter": 3
+    }
+  },
+  "wohnort": "Berlin"
+}
