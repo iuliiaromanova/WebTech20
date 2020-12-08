@@ -12,12 +12,23 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { TableComponent } from './table/table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { SingleComponent } from './single/single.component';
+import { ReactiveFormsModule} from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+// import {RouterModule} from '@angular/router';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    TableComponent,
+    SingleComponent
   ],
   imports: [
     BrowserModule,
@@ -30,6 +41,13 @@ import { MatListModule } from '@angular/material/list';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+//    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
