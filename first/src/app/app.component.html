@@ -1,1 +1,24 @@
-<router-outlet><h1>This is app</h1></router-outlet>
+<h1>This is app</h1>
+<app-mycomponent></app-mycomponent>
+<router-outlet></router-outlet>
+<ng-template [ngIf]="true">
+  <p>
+    Expression is true and ngIf is true.
+    This paragraph is in the DOM.
+  </p>
+</ng-template>
+<ng-template [ngIf]="false">
+  <p>
+    Expression is false and ngIf is false.
+    This paragraph is not in the DOM.
+  </p>
+</ng-template>
+<div *ngFor="let value of [1, 2, 3, 4, 5, 6];
+                 index as i;
+                 first as f;
+                 last as l;
+                 odd as o;">
+  <div *ngIf="f">Start</div>
+  <div [style.color]="o ? 'red' : 'blue'">{{ i }} : {{ value }}</div>
+  <div *ngIf="l">Ende</div>
+</div>
