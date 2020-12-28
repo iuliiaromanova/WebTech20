@@ -20,6 +20,44 @@ export class BackendService {
       .get<Data>(this.baseUrl + '/' + dataId);
   }
 
+  update(dataId: number, data: Data): void {
+    this.http.put<Data>(this.baseUrl + '/' + dataId, data)
+      .subscribe(
+        response => {
+          console.log(response);
+          console.log(response.id);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
+
+  deleteOne(dataId: number): void {
+    this.http.delete<Data>(this.baseUrl + '/' + dataId)
+      .subscribe(
+        response => {
+          console.log(response);
+          console.log(response.id);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
+
+  create(data: Data): void {
+    this.http.post<Data>(this.baseUrl, data)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        }
+      );
+  }
+
 }
 
 

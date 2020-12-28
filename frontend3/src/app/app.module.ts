@@ -9,12 +9,14 @@ import { ReadComponent } from './members/read/read.component';
 import { UpdateComponent } from './members/update/update.component';
 import { DeleteComponent } from './members/delete/delete.component';
 import { NgxBootstrapIconsModule } from 'ngx-bootstrap-icons';
-import { pencilSquare } from 'ngx-bootstrap-icons';
+import { pencilSquare, trash } from 'ngx-bootstrap-icons';
 import { FormComponent } from './members/read/form/form.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {ReactiveFormsModule} from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 const icons = {
   pencilSquare,
+  trash,
 };
 
 @NgModule({
@@ -31,7 +33,8 @@ const icons = {
     AppRoutingModule,
     HttpClientModule,
     NgxBootstrapIconsModule.pick(icons),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit } from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { Data } from '../../../shared/data';
 import { Location } from '@angular/common';
@@ -10,6 +10,7 @@ import { Location } from '@angular/common';
 })
 export class FormComponent implements OnInit {
   @Input() data: Data;
+  @Output() updateEvent = new EventEmitter<Data>();
   form: FormGroup;
 
   constructor(private fb: FormBuilder, private location: Location) {
@@ -33,8 +34,12 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.form.value);
+    const values = this.form.value;
+    this.data.id = values.idControl;
+    this.data.firstname = values.firstNameControl;
+    this.data.lastname = values.lastNameControl;
+    this.data.email = values.emailControl;
+    this.updateEvent.emit(this.data);
   }
 
   cancel(): void {
